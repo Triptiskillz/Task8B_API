@@ -63,6 +63,7 @@ let data = {
       quantity: 10,
       price: 25,
     },
+   
     {
       purchaseId: 2,
       shopId: 1,
@@ -85,13 +86,6 @@ let data = {
       price: 31,
     },
     {
-      purchaseId: 5,
-      shopId: 2,
-      productid: 5,
-      quantity: 10,
-      price: 8,
-    },
-     {
       purchaseId: 5,
       shopId: 2,
       productid: 5,
@@ -622,6 +616,13 @@ let data = {
       productid: 6,
       quantity: 5,
       price: 40,
+    },
+       {
+      purchaseId: 81,
+      shopId: 1,
+      productid: 1,
+      quantity: 10,
+      price: 25,
     },
   ],
 };
