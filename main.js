@@ -75,18 +75,21 @@ app.put("/products/:id", function (req, res) {
 
 app.get("/purchases", function (req, res) {
   let arr = listData.purchases;
-  let shop = req.query.shop;
+  let shop = +req.query.st;
   let product = req.query.product;
 
   let sort = req.query.sort;
-  let item = listData.shops.filter((st) => st.name == shop);
+  let item = listData.shops.filter((st) => st.shopId == shop);
   if (shop) {
     arr = arr.filter((e) => item.find((st) => st.shopId == e.shopId));
   }
   if (product) {
     let productArr = product.split(",");
     let item1 = listData.products.filter((st) =>
-      productArr.find((c) => st.productName == c)
+      productArr.find((c) => {
+        let product1 = c.substring(2, product.length);
+        return +(st.productId) == +(product1);
+      })
     );
     arr = arr.filter((e) => item1.find((st) => st.productId == e.productid));
   }
