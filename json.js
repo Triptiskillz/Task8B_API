@@ -91,6 +91,13 @@ let data = {
       quantity: 10,
       price: 8,
     },
+     {
+      purchaseId: 5,
+      shopId: 2,
+      productid: 5,
+      quantity: 10,
+      price: 8,
+    },
     {
       purchaseId: 6,
       shopId: 2,
